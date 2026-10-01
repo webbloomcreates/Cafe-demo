@@ -220,9 +220,9 @@ button {
   font-family: var(--font-serif);
   font-size: 2.5rem;
   font-weight: 500;
-  line-height: 1.12;
+  line-height: 1.2;
   letter-spacing: -0.01em;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 @media (min-width: 768px) {
@@ -239,10 +239,13 @@ button {
 
 .section-subtitle {
   font-family: var(--font-sans);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--text-muted);
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.75;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .theme-dark .section-subtitle {
@@ -698,7 +701,7 @@ button {
 }
 
 .hero-badge-wrap {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
   display: flex;
   justify-content: center;
 }
@@ -706,16 +709,16 @@ button {
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.4rem 1rem;
+  gap: 0.65rem;
+  padding: 0.5rem 1.25rem;
   border-radius: var(--radius-full);
   background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: var(--backdrop-blur);
   font-family: var(--font-sans);
   font-size: 0.775rem;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-caramel);
 }
@@ -729,13 +732,13 @@ button {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.8rem, 5.2vw, 4.8rem);
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
   font-weight: 500;
-  line-height: 1.06;
-  letter-spacing: -0.015em;
-  margin-bottom: 1.5rem;
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  margin-bottom: 2rem;
   color: #ffffff;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.95), 0 2px 4px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.95), 0 2px 6px rgba(0, 0, 0, 0.9);
 }
 
 .title-line {
@@ -744,6 +747,7 @@ button {
   transform: translateY(24px);
   transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0.1em 0;
 }
 
 .title-line.revealed {
@@ -760,11 +764,12 @@ button {
 
 .hero-subtitle {
   font-family: var(--font-sans);
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  letter-spacing: 0.015em;
   color: rgba(255, 255, 255, 0.94);
-  margin-bottom: 2.25rem;
-  max-width: 640px;
+  margin-bottom: 2.75rem;
+  max-width: 660px;
   margin-left: auto;
   margin-right: auto;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
@@ -772,7 +777,7 @@ button {
 
 @media (min-width: 768px) {
   .hero-subtitle {
-    font-size: 1.18rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -781,20 +786,20 @@ button {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .hero-info-bar {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-  padding: 1.25rem 1.5rem;
-  border-radius: var(--radius-lg);
-  background-color: rgba(23, 17, 14, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 1.5rem;
+  padding: 1.5rem 2.25rem;
+  border-radius: var(--radius-xl);
+  background-color: rgba(23, 17, 14, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: var(--backdrop-blur);
-  max-width: 720px;
+  max-width: 740px;
   margin: 0 auto;
 }
 
@@ -806,22 +811,22 @@ button {
 
 @media (max-width: 767px) {
   .hero-title {
-    font-size: clamp(2.1rem, 7vw, 3.2rem);
-    line-height: 1.1;
-    margin-bottom: 1rem;
+    font-size: clamp(2.1rem, 6.5vw, 3.2rem);
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
   }
 
   .hero-subtitle {
-    font-size: 0.98rem;
-    line-height: 1.6;
-    margin-bottom: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 2.25rem;
     padding: 0 0.5rem;
   }
 
   .hero-actions {
     flex-direction: column;
     width: 100%;
-    gap: 0.85rem;
+    gap: 1rem;
   }
 
   .hero-actions .btn {
@@ -831,8 +836,8 @@ button {
 
   .hero-info-bar {
     grid-template-columns: repeat(2, 1fr);
-    padding: 1rem;
-    gap: 0.85rem;
+    padding: 1.25rem 1rem;
+    gap: 1.25rem;
     width: 100%;
   }
 }
@@ -840,6 +845,7 @@ button {
 @media (max-width: 480px) {
   .hero-info-bar {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
