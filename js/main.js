@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNewsletterForm();
   initSmoothScroll();
   initScrollReveals();
-  initCoffeePourExperience();
+  initHeroReveal();
 });
 
 /* ==========================================================================
@@ -258,218 +258,37 @@ function initSmoothScroll() {
 }
 
 /* ==========================================================================
-   8. CINEMATIC COFFEE POUR RITUAL & WEBSITE REVEAL CONTROLLER
+   8. HERO SECTION REVEAL CONTROLLER
    ========================================================================== */
-function initCoffeePourExperience() {
-  const darkOverlay = document.getElementById('heroDarkOverlay');
-  const coffeeScene = document.getElementById('heroCoffeeScene');
-  const kettleGroup = document.getElementById('kettleGroup');
-  const streamGroup = document.getElementById('streamGroup');
-  const liquidTransform = document.getElementById('liquidTransformGroup');
-  const cremaGroup = document.getElementById('cremaGroup');
-  const steamGroup = document.getElementById('steamGroup');
-  const replayBtn = document.getElementById('replayPourBtn');
-
-  // UI Reveal Elements
+function initHeroReveal() {
   const heroBadge = document.getElementById('heroBadge');
   const titleLines = document.querySelectorAll('.title-line');
-  const heroSubtitle = document.getElementById('heroSubtitle') || document.getElementById('heroSub');
+  const heroSubtitle = document.getElementById('heroSubtitle');
   const heroActions = document.getElementById('heroActions');
   const heroInfoBar = document.getElementById('heroInfoBar');
 
-  if (!coffeeScene || !liquidTransform) return;
-
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-  // Track timeouts for clean reset & replay
-  let timelineTimeouts = [];
-
-  function clearAllTimeouts() {
-    timelineTimeouts.forEach(t => clearTimeout(t));
-    timelineTimeouts = [];
-  }
-
-  function scheduleTimeout(fn, delay) {
-    const t = setTimeout(fn, delay);
-    timelineTimeouts.push(t);
-    return t;
-  }
-
-  // Set scene state immediately
-  function setCompletedState() {
-    clearAllTimeouts();
-    document.body.style.overflow = '';
-
-    const isMobile = window.innerWidth <= 991;
-    if (darkOverlay) darkOverlay.style.opacity = isMobile ? '0.95' : '0.90';
-    if (kettleGroup) {
-      kettleGroup.classList.remove('visible', 'tilting');
-    }
-    if (streamGroup) streamGroup.classList.remove('active');
-    if (liquidTransform) liquidTransform.setAttribute('transform', 'translate(0, 0)');
-    if (cremaGroup) cremaGroup.classList.add('visible');
-    if (steamGroup) steamGroup.classList.add('active');
-
-    // Reveal UI
+  // Smooth immediate reveal sequence
+  setTimeout(() => {
     if (heroBadge) heroBadge.classList.add('revealed');
-    titleLines.forEach(line => line.classList.add('revealed'));
+  }, 100);
+
+  titleLines.forEach((line, index) => {
+    setTimeout(() => {
+      line.classList.add('revealed');
+    }, 250 + index * 180);
+  });
+
+  setTimeout(() => {
     if (heroSubtitle) heroSubtitle.classList.add('revealed');
+  }, 650);
+
+  setTimeout(() => {
     if (heroActions) heroActions.classList.add('revealed');
+  }, 850);
+
+  setTimeout(() => {
     if (heroInfoBar) heroInfoBar.classList.add('revealed');
-    if (replayBtn) replayBtn.classList.add('visible');
-  }
-
-  function resetSceneState() {
-    clearAllTimeouts();
-
-    if (darkOverlay) darkOverlay.style.opacity = '1';
-    if (kettleGroup) kettleGroup.classList.remove('visible', 'tilting');
-    if (streamGroup) streamGroup.classList.remove('active');
-    if (liquidTransform) liquidTransform.setAttribute('transform', 'translate(0, 14)');
-    if (cremaGroup) cremaGroup.classList.remove('visible');
-    if (steamGroup) steamGroup.classList.remove('active');
-
-    // Hide UI
-    if (heroBadge) heroBadge.classList.remove('revealed');
-    titleLines.forEach(line => line.classList.remove('revealed'));
-    if (heroSubtitle) heroSubtitle.classList.remove('revealed');
-    if (heroActions) heroActions.classList.remove('revealed');
-    if (heroInfoBar) heroInfoBar.classList.remove('revealed');
-  }
-
-  function playMasterTimeline() {
-    resetSceneState();
-
-    // Prevent scrolling during intro
-    document.body.style.overflow = 'hidden';
-
-    // 0.0s - 1.5s: Dark café environment fades in subtly
-    scheduleTimeout(() => {
-      const isMobile = window.innerWidth <= 991;
-      if (darkOverlay) darkOverlay.style.opacity = isMobile ? '0.96' : '0.92';
-    }, 500);
-
-    // 2.0s - 3.2s: Kettle enters
-    scheduleTimeout(() => {
-      if (kettleGroup) kettleGroup.classList.add('visible');
-    }, 2000);
-
-    // 3.2s - 4.0s: Kettle tilts into pour angle
-    scheduleTimeout(() => {
-      if (kettleGroup) kettleGroup.classList.add('tilting');
-    }, 3200);
-
-    // 4.0s - 8.5s: Coffee stream pours, level rises
-    scheduleTimeout(() => {
-      if (streamGroup) streamGroup.classList.add('active');
-
-      // Animate liquid rise from translateY(14px) to translateY(0px) over 4.5s
-      const startTime = performance.now();
-      const duration = 4500;
-
-      function animateLiquid(now) {
-        const elapsed = now - startTime;
-        const progress = Math.min(1, elapsed / duration);
-        const easeProgress = 1 - Math.pow(1 - progress, 2);
-        const translateY = 14 * (1 - easeProgress);
-
-        if (liquidTransform) {
-          liquidTransform.setAttribute('transform', `translate(0, ${translateY.toFixed(2)})`);
-        }
-
-        if (progress < 1) {
-          requestAnimationFrame(animateLiquid);
-        }
-      }
-
-      requestAnimationFrame(animateLiquid);
-    }, 4000);
-
-    // 5.0s: Crema bloom begins
-    scheduleTimeout(() => {
-      if (cremaGroup) cremaGroup.classList.add('visible');
-    }, 5000);
-
-    // 6.0s: Steam begins
-    scheduleTimeout(() => {
-      if (steamGroup) steamGroup.classList.add('active');
-    }, 6000);
-
-    // 8.5s - 9.5s: Pour stops, kettle un-tilts & exits
-    scheduleTimeout(() => {
-      if (streamGroup) streamGroup.classList.remove('active');
-      if (kettleGroup) kettleGroup.classList.remove('tilting');
-    }, 8500);
-
-    scheduleTimeout(() => {
-      if (kettleGroup) kettleGroup.classList.remove('visible');
-      const isMobile = window.innerWidth <= 991;
-      if (darkOverlay) darkOverlay.style.opacity = isMobile ? '0.95' : '0.90';
-    }, 9500);
-
-    // 10.5s+: WEBSITE UI SEQUENTIAL REVEAL
-    scheduleTimeout(() => {
-      document.body.style.overflow = '';
-    }, 10500);
-
-    scheduleTimeout(() => {
-      if (heroBadge) heroBadge.classList.add('revealed');
-    }, 11000);
-
-    // Stagger reveal title lines
-    titleLines.forEach((line, index) => {
-      scheduleTimeout(() => {
-        line.classList.add('revealed');
-      }, 11400 + index * 250);
-    });
-
-    scheduleTimeout(() => {
-      if (heroSubtitle) heroSubtitle.classList.add('revealed');
-    }, 12200);
-
-    scheduleTimeout(() => {
-      if (heroActions) heroActions.classList.add('revealed');
-    }, 12600);
-
-    scheduleTimeout(() => {
-      if (heroInfoBar) heroInfoBar.classList.add('revealed');
-    }, 13000);
-
-    scheduleTimeout(() => {
-      if (replayBtn) replayBtn.classList.add('visible');
-    }, 13300);
-  }
-
-  if (prefersReducedMotion) {
-    setCompletedState();
-  } else {
-    playMasterTimeline();
-  }
-
-  if (replayBtn) {
-    replayBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      playMasterTimeline();
-    });
-  }
-
-  if (!isTouchDevice && !prefersReducedMotion) {
-    let mouseX = 0;
-    let mouseY = 0;
-
-    window.addEventListener('mousemove', (e) => {
-      const normX = (e.clientX / window.innerWidth - 0.5);
-      const normY = (e.clientY / window.innerHeight - 0.5);
-
-      mouseX = normX * 4;
-      mouseY = normY * 3;
-
-      if (coffeeScene) {
-        coffeeScene.style.transform = `translate3d(${mouseX.toFixed(2)}px, calc(-50% + ${mouseY.toFixed(2)}px), 0)`;
-      }
-    });
-  }
+  }, 1050);
 }
 
 /* ==========================================================================

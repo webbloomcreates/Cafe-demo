@@ -639,15 +639,9 @@ button {
 .hero-dark-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(10, 6, 3, 0.96) 0%,
-    rgba(10, 6, 3, 0.88) 38%,
-    rgba(10, 6, 3, 0.72) 68%,
-    rgba(10, 6, 3, 0.85) 100%
-  );
+  background: radial-gradient(circle at 50% 45%, rgba(10, 6, 3, 0.75) 0%, rgba(10, 6, 3, 0.92) 80%, rgba(6, 4, 2, 0.98) 100%);
   z-index: 2;
-  transition: opacity 2.5s ease;
+  transition: opacity 1.5s ease;
   pointer-events: none;
 }
 
@@ -656,9 +650,8 @@ button {
     background: linear-gradient(
       180deg,
       rgba(6, 4, 2, 0.97) 0%,
-      rgba(6, 4, 2, 0.92) 35%,
-      rgba(6, 4, 2, 0.95) 75%,
-      rgba(6, 4, 2, 0.98) 100%
+      rgba(6, 4, 2, 0.90) 40%,
+      rgba(6, 4, 2, 0.96) 100%
     );
   }
 }
@@ -666,9 +659,9 @@ button {
 .hero-layout-grid {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  max-width: 1280px;
+  align-items: center;
+  text-align: center;
+  max-width: 840px;
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -678,21 +671,16 @@ button {
 .hero-content {
   position: relative;
   z-index: 5;
-  max-width: 620px;
-  background: radial-gradient(ellipse at 20% 50%, rgba(14, 9, 5, 0.75) 0%, rgba(14, 9, 5, 0.38) 60%, transparent 100%);
-  padding: 1.25rem 2rem 1.25rem 0;
+  max-width: 100%;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin: 0 auto;
   border-radius: var(--radius-xl);
 }
 
 @media (max-width: 991px) {
-  .hero-layout-grid {
-    align-items: center;
-    text-align: center;
-  }
   .hero-content {
-    max-width: 100%;
     padding: 1rem 0;
-    background: none;
   }
 }
 
@@ -711,6 +699,8 @@ button {
 
 .hero-badge-wrap {
   margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-badge {
@@ -774,7 +764,9 @@ button {
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.94);
   margin-bottom: 2.25rem;
-  max-width: 580px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
 }
 
@@ -788,14 +780,9 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 1.25rem;
   margin-bottom: 3rem;
-}
-
-@media (max-width: 991px) {
-  .hero-actions {
-    justify-content: center;
-  }
 }
 
 .hero-info-bar {
@@ -807,7 +794,8 @@ button {
   background-color: rgba(23, 17, 14, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: var(--backdrop-blur);
-  max-width: 580px;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -841,15 +829,6 @@ button {
     max-width: 320px;
   }
 
-  .replay-pour-btn span {
-    display: none;
-  }
-
-  .replay-pour-btn {
-    padding: 0.5rem;
-    border-radius: 50%;
-  }
-
   .hero-info-bar {
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem;
@@ -862,236 +841,6 @@ button {
   .hero-info-bar {
     grid-template-columns: 1fr;
   }
-}
-
-.info-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.85rem;
-}
-
-.info-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-sm);
-  background-color: rgba(184, 121, 67, 0.15);
-  color: var(--color-caramel);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 0.9rem;
-}
-
-.info-text-heading {
-  font-family: var(--font-sans);
-  font-size: 0.825rem;
-  font-weight: 600;
-  color: #ffffff;
-}
-
-.info-text-sub {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  color: var(--color-soft-taupe);
-}
-
-/* ==========================================================================
-   EDGE-TO-EDGE CINEMATIC COFFEE POUR SCENE (NO CARDS, PROPORTIONATE SCALE)
-   ========================================================================== */
-
-.hero-coffee-scene {
-  position: absolute;
-  right: clamp(4%, 9vw, 15%);
-  top: 60%;
-  transform: translateY(-50%);
-  width: clamp(200px, 22vw, 290px);
-  max-width: 310px;
-  z-index: 3;
-  pointer-events: auto;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.4s ease;
-  overflow: visible;
-  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.7));
-}
-
-.hero-coffee-scene:hover {
-  filter: brightness(1.05) drop-shadow(0 20px 40px rgba(0,0,0,0.85));
-  transform: translateY(-52%) scale(1.015);
-}
-
-@media (max-width: 991px) {
-  .hero-coffee-scene {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: clamp(170px, 46vw, 240px);
-    margin: 2rem auto 0 auto;
-  }
-
-  .hero-coffee-scene:hover {
-    transform: none;
-  }
-}
-
-/* Kettle Animation Group */
-#kettleGroup {
-  transform-origin: 345px 125px;
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
-              opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-  opacity: 0;
-  transform: translateY(-20px) rotate(-10deg);
-}
-
-#kettleGroup.visible {
-  opacity: 1;
-  transform: translateY(0) rotate(0deg);
-}
-
-#kettleGroup.tilting {
-  opacity: 1;
-  transform: translateY(4px) rotate(5deg);
-}
-
-/* Pour Stream Animation Group */
-#streamGroup {
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-#streamGroup.active {
-  opacity: 1;
-}
-
-.stream-flow-line {
-  stroke-dasharray: 40;
-  animation: streamFlowAnim 0.6s linear infinite;
-}
-
-@keyframes streamFlowAnim {
-  0% { stroke-dashoffset: 40; }
-  100% { stroke-dashoffset: 0; }
-}
-
-/* Liquid Surface Rising Animation Group */
-#liquidTransformGroup {
-  transition: transform 0.1s linear;
-}
-
-/* Crema Bloom Group */
-#cremaGroup {
-  opacity: 0;
-  transition: opacity 2.5s ease;
-}
-
-#cremaGroup.visible {
-  opacity: 0.92;
-}
-
-/* Impact Ripples */
-.ripple-circle {
-  transform-origin: 400px 410px;
-  animation: rippleExpand 1.5s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
-  opacity: 0;
-}
-
-.ripple-circle:nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-.ripple-circle:nth-child(3) {
-  animation-delay: 1s;
-}
-
-@keyframes rippleExpand {
-  0% {
-    r: 4;
-    opacity: 0.8;
-  }
-  100% {
-    r: 45;
-    opacity: 0;
-  }
-}
-
-/* Steam Wisps */
-.steam-wisp {
-  stroke-dasharray: 140;
-  stroke-dashoffset: 140;
-  opacity: 0;
-}
-
-#steamGroup.active .steam-wisp {
-  animation: steamRiseAnim 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-#steam1 { animation-delay: 0s !important; }
-#steam2 { animation-delay: 1.4s !important; }
-#steam3 { animation-delay: 2.8s !important; }
-
-@keyframes steamRiseAnim {
-  0% {
-    stroke-dashoffset: 140;
-    opacity: 0;
-    transform: translateY(0) scaleX(1);
-  }
-  25% {
-    opacity: 0.35;
-  }
-  75% {
-    opacity: 0.15;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    opacity: 0;
-    transform: translateY(-40px) scaleX(1.35);
-  }
-}
-
-/* Header Replay Button */
-.replay-pour-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.45rem 1rem;
-  border-radius: var(--radius-full);
-  background-color: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: var(--color-warm-cream);
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: all 0.35s ease;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.replay-pour-btn.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.replay-pour-btn:hover {
-  background-color: var(--color-terracotta);
-  border-color: var(--color-terracotta);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(201, 111, 79, 0.3);
-}
-
-.header.scrolled .replay-pour-btn {
-  background-color: rgba(23, 17, 14, 0.06);
-  border-color: rgba(23, 17, 14, 0.15);
-  color: var(--color-dark-coffee);
-}
-
-.header.scrolled .replay-pour-btn:hover {
-  background-color: var(--color-terracotta);
-  border-color: var(--color-terracotta);
-  color: #ffffff;
 }
 
 /* ==========================================================================
