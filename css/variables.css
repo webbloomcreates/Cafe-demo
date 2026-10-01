@@ -1,0 +1,56 @@
+/* ==========================================================================
+   MAISON ÉLAN - REFINED DESIGN SYSTEM VARIABLES
+   ========================================================================== */
+
+:root {
+  /* Editorial Color Palette */
+  --color-warm-cream:    #F3EFE8;
+  --color-warm-white:    #FAF8F3;
+  --color-deep-espresso: #241A15;
+  --color-dark-coffee:   #17110E;
+  --color-caramel:       #B87943;
+  --color-terracotta:    #C96F4F;
+  --color-soft-taupe:    #B8AEA2;
+  --color-muted-border:  rgba(255, 255, 255, 0.12);
+  --color-light-border:  rgba(36, 26, 21, 0.1);
+
+  /* Semantic Aliases */
+  --bg-primary:      var(--color-warm-white);
+  --bg-secondary:    var(--color-warm-cream);
+  --bg-dark:         var(--color-dark-coffee);
+  --bg-dark-surface: var(--color-deep-espresso);
+
+  --text-main:       var(--color-dark-coffee);
+  --text-muted:      #6B5E55;
+  --text-subtle:     #96897E;
+  --text-on-dark:    var(--color-warm-white);
+  --text-on-dark-muted: var(--color-soft-taupe);
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows & Elevation */
+  --shadow-sm: 0 4px 14px rgba(23, 17, 14, 0.05);
+  --shadow-md: 0 12px 32px rgba(23, 17, 14, 0.09);
+  --shadow-lg: 0 24px 56px rgba(23, 17, 14, 0.14);
+  --shadow-dark: 0 25px 60px rgba(0, 0, 0, 0.5);
+
+  /* Glassmorphism */
+  --glass-bg-dark: rgba(28, 20, 15, 0.82);
+  --glass-bg-light: rgba(250, 248, 243, 0.88);
+  --backdrop-blur: blur(16px);
+
+  /* Easing Functions */
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.25s var(--ease-editorial);
+  --transition-normal: 0.4s var(--ease-editorial);
+  --transition-slow: 0.8s var(--ease-editorial);
+}

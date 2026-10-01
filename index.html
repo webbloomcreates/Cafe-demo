@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison Élan | Specialty Coffee &amp; Culinary Atelier</title>
+  <meta name="description" content="Maison Élan is a luxury specialty coffee roastery and artisanal culinary atelier offering single-origin micro-lot coffees, house-baked laminated pastries, and elevated all-day brunch.">
+  <meta name="theme-color" content="#17110E">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Custom Cursor Follower (Desktop) -->
+  <div class="custom-cursor" id="customCursor"></div>
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <header class="header" id="mainHeader">
+    <div class="container">
+      <nav class="nav-wrapper">
+        <!-- Logo Lockup -->
+        <a href="#" class="brand-logo" id="navLogo">
+          <svg class="logo-mark" width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.2" stroke-opacity="0.35"/>
+            <path d="M11 11 H21 V18 C21 21 18.5 22.5 16 22.5 C13.5 22.5 11 21 11 18 Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M21 13 H23 C24.5 13 24.5 17 21 17" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            <path d="M14 8 C14 8 15 9.5 14 11M18 8 C18 8 19 9.5 18 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <div class="logo-text-group">
+            <span class="logo-title">MAISON ÉLAN</span>
+            <span class="logo-subtitle">COFFEE &amp; ATELIER</span>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#featured" class="nav-link">Craft</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#testimonials" class="nav-link">Accolades</a></li>
+          <li><a href="#location" class="nav-link">Hours &amp; Location</a></li>
+        </ul>
+
+        <!-- Action Button & Mobile Toggle -->
+        <div class="nav-actions">
+          <button class="replay-pour-btn" id="replayPourBtn" aria-label="Replay Coffee Pouring Animation">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+            <span>Replay Pour</span>
+          </button>
+
+          <a href="#reservation" class="btn btn-primary btn-sm" id="headerReserveBtn">
+            <span>Reserve a Table</span>
+          </a>
+
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div>
+      <div class="brand-logo" style="color: var(--color-dark-coffee); margin-bottom: 2.5rem;">
+        <svg class="logo-mark" width="28" height="28" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.2" stroke-opacity="0.35"/>
+          <path d="M11 11 H21 V18 C21 21 18.5 22.5 16 22.5 C13.5 22.5 11 21 11 18 Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <div class="logo-text-group">
+          <span class="logo-title">MAISON ÉLAN</span>
+          <span class="logo-subtitle">COFFEE &amp; ATELIER</span>
+        </div>
+      </div>
+
+      <ul class="mobile-nav-links">
+        <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+        <li><a href="#menu" class="mobile-nav-link">Signature Menu</a></li>
+        <li><a href="#experience" class="mobile-nav-link">The Experience</a></li>
+        <li><a href="#featured" class="mobile-nav-link">Craft Specialties</a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="#testimonials" class="mobile-nav-link">Accolades</a></li>
+        <li><a href="#location" class="mobile-nav-link">Hours &amp; Location</a></li>
+      </ul>
+    </div>
+
+    <div style="padding-top: 2rem; border-top: 1px solid var(--color-light-border);">
+      <a href="#reservation" class="btn btn-primary" style="width: 100%;">Book Table Experience</a>
+    </div>
+  </div>
+  <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+
+  <main>
+    <!-- ==========================================================================
+         2. FULL-SCREEN CINEMATIC COFFEE POUR HERO SECTION
+         ========================================================================== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-media">
+        <img src="assets/images/hero_bg.jpg" alt="Maison Elan Specialty Cafe Interior" class="hero-bg-img">
+        <div class="hero-overlay" id="heroDarkOverlay"></div>
+      </div>
+
+      <!-- Full-Screen Interactive SVG Coffee Pour Scene (Ultra-Premium Realism) -->
+      <div class="hero-coffee-scene" id="heroCoffeeScene">
+        <svg class="coffee-pour-svg" viewBox="0 0 500 450" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <!-- Liquid Clip Path inside Cup Rim Ellipse -->
+            <clipPath id="cupRimClip">
+              <ellipse cx="250" cy="290" rx="73" ry="14" />
+            </clipPath>
+
+            <!-- Kettle Warm Bronze & Espresso Gradient -->
+            <linearGradient id="kettleBodyMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4D362B"/>
+              <stop offset="35%" stop-color="#2B1D16"/>
+              <stop offset="75%" stop-color="#180F0A"/>
+              <stop offset="100%" stop-color="#3D291E"/>
+            </linearGradient>
+
+            <linearGradient id="copperReflection" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#8C6348"/>
+              <stop offset="50%" stop-color="#D9A37A"/>
+              <stop offset="100%" stop-color="#6E4B33"/>
+            </linearGradient>
+
+            <!-- Stream Espresso Liquid Gradient -->
+            <linearGradient id="pourStreamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#54301B" stop-opacity="0.96"/>
+              <stop offset="40%" stop-color="#C47E4B" stop-opacity="0.94"/>
+              <stop offset="80%" stop-color="#6B3B20" stop-opacity="0.96"/>
+              <stop offset="100%" stop-color="#26150D" stop-opacity="0.98"/>
+            </linearGradient>
+
+            <!-- Premium Porcelain Glaze Gradient -->
+            <linearGradient id="ceramicGlaze" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FAF7F2"/>
+              <stop offset="25%" stop-color="#E8DEC8"/>
+              <stop offset="70%" stop-color="#CDBBA2"/>
+              <stop offset="100%" stop-color="#9E8B75"/>
+            </linearGradient>
+
+            <linearGradient id="saucerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FAF5EE"/>
+              <stop offset="50%" stop-color="#E5D9C7"/>
+              <stop offset="100%" stop-color="#B8A790"/>
+            </linearGradient>
+
+            <!-- Radial Gradient for Deep Espresso Surface -->
+            <radialGradient id="coffeeSurfaceGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#6B3B20"/>
+              <stop offset="45%" stop-color="#402315"/>
+              <stop offset="85%" stop-color="#24130A"/>
+              <stop offset="100%" stop-color="#150A05"/>
+            </radialGradient>
+
+            <radialGradient id="cremaBloomGrad" cx="45%" cy="55%" r="55%">
+              <stop offset="0%" stop-color="#EBB383" stop-opacity="0.95"/>
+              <stop offset="35%" stop-color="#D9A372" stop-opacity="0.88"/>
+              <stop offset="70%" stop-color="#B87345" stop-opacity="0.55"/>
+              <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+            </radialGradient>
+
+            <!-- Soft Realistic Drop Shadow Filter -->
+            <filter id="softRealShadow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+              <feOffset dx="0" dy="7"/>
+              <feComponentTransfer><feFuncA type="linear" slope="0.45"/></feComponentTransfer>
+              <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+
+          <!-- 1. Ambient Warm Lighting Backlight Glow -->
+          <g class="background-atmosphere">
+            <ellipse cx="250" cy="290" rx="180" ry="110" fill="rgba(201, 111, 79, 0.16)" filter="blur(35px)"/>
+            <ellipse cx="250" cy="370" rx="140" ry="40" fill="rgba(184, 121, 67, 0.12)" filter="blur(20px)"/>
+          </g>
+
+          <!-- 2. Porcelain Saucer & Contact Shadow -->
+          <g class="saucer-group">
+            <!-- Contact Shadow on Café Counter -->
+            <ellipse cx="250" cy="383" rx="132" ry="15" fill="rgba(10, 6, 4, 0.55)" filter="blur(9px)"/>
+            <!-- Saucer Body -->
+            <ellipse cx="250" cy="374" rx="118" ry="18" fill="url(#saucerGrad)" stroke="rgba(255,255,255,0.5)" stroke-width="0.8" filter="url(#softRealShadow)"/>
+            <ellipse cx="250" cy="372" rx="90" ry="12" fill="none" stroke="rgba(201, 154, 85, 0.4)" stroke-width="1.2"/>
+          </g>
+
+          <!-- 3. Porcelain Coffee Cup Assembly -->
+          <g class="cup-assembly" id="cupAssembly">
+            <!-- Cup Contact Shadow on Saucer -->
+            <ellipse id="cupContactShadow" cx="250" cy="368" rx="74" ry="8" fill="rgba(0,0,0,0.52)" filter="blur(3.5px)"/>
+
+            <!-- Porcelain Handle -->
+            <path d="M 324 305 C 354 305, 354 352, 320 348" stroke="#EDE3D3" stroke-width="11" stroke-linecap="round" fill="none" filter="url(#softRealShadow)"/>
+            <path d="M 324 305 C 354 305, 354 352, 320 348" stroke="rgba(0,0,0,0.18)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+            <!-- Main Cup Body -->
+            <path d="M 175 290 L 325 290 C 328 290, 330 294, 329 299 L 314 350 C 310 364, 292 370, 270 370 L 230 370 C 208 370, 190 364, 186 350 L 171 299 C 170 294, 172 290, 175 290 Z" fill="url(#ceramicGlaze)" stroke="rgba(255,255,255,0.45)" stroke-width="0.8" filter="url(#softRealShadow)"/>
+
+            <!-- Glaze Specular Highlight -->
+            <path id="glazeHighlight" d="M 188 298 C 185 320, 188 345, 198 360" stroke="rgba(255,255,255,0.65)" stroke-width="3.5" stroke-linecap="round" fill="none" filter="blur(1px)"/>
+
+            <!-- Cup Rim Ellipse -->
+            <ellipse cx="250" cy="290" rx="75" ry="16" fill="#1C100A" stroke="#EDE3D3" stroke-width="1.8"/>
+            <ellipse cx="250" cy="289" rx="73" ry="14" stroke="rgba(255,255,255,0.6)" stroke-width="1" fill="none"/>
+
+            <!-- Clipped Espresso Liquid Surface -->
+            <g clip-path="url(#cupRimClip)" id="liquidClipGroup">
+              <!-- Liquid Level Group (Moves vertically from translateY(14) up to translateY(0)) -->
+              <g id="liquidTransformGroup" transform="translate(0, 14)">
+                <ellipse cx="250" cy="290" rx="73" ry="15" fill="url(#coffeeSurfaceGrad)"/>
+                
+                <!-- Crema Bloom Layer -->
+                <g id="cremaGroup" opacity="0.25">
+                  <ellipse cx="245" cy="291" rx="68" ry="13" fill="url(#cremaBloomGrad)"/>
+                  <ellipse cx="230" cy="287" rx="34" ry="7.5" fill="rgba(245, 198, 155, 0.5)" filter="blur(1.5px)"/>
+                  <ellipse cx="265" cy="293" rx="26" ry="5.5" fill="rgba(215, 160, 110, 0.45)" filter="blur(1.5px)"/>
+                </g>
+
+                <!-- Specular Surface Shine -->
+                <ellipse cx="235" cy="286" rx="28" ry="5" fill="rgba(255, 245, 230, 0.25)" filter="blur(1px)"/>
+
+                <!-- Dynamic Impact Ripples -->
+                <ellipse id="rippleCircle1" cx="250" cy="290" rx="4" ry="1.2" stroke="rgba(240, 195, 145, 0)" stroke-width="1.2" fill="none"/>
+                <ellipse id="rippleCircle2" cx="250" cy="290" rx="1.5" ry="0.4" stroke="rgba(240, 195, 145, 0)" stroke-width="1.2" fill="none"/>
+              </g>
+            </g>
+
+            <!-- Inner Rim Depth Shadow overlay -->
+            <ellipse cx="250" cy="290" rx="73" ry="14" stroke="rgba(0,0,0,0.68)" stroke-width="2.5" fill="none" pointer-events="none"/>
+          </g>
+
+          <!-- 4. Dynamic Coffee Pouring Stream (Starts EXACTLY at Spout Tip X=285 Y=175 -> Center X=250 Y=290) -->
+          <g class="pour-stream-group" id="streamGroup">
+            <path id="streamMainPath" d="M 285 175 C 283 210, 258 250, 250 290" stroke="url(#pourStreamGrad)" stroke-width="4.5" stroke-linecap="round" fill="none" opacity="0"/>
+            <path id="streamShinePath" d="M 284.5 175 C 282.5 210, 257.5 250, 249.5 290" stroke="rgba(255, 240, 215, 0.85)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0"/>
+          </g>
+
+          <!-- 5. Gooseneck Kettle (Proportionate size: ~45% of cup width) -->
+          <g class="kettle-group" id="kettleGroup" transform="translate(0, -15) rotate(0)" transform-origin="345 125" opacity="0">
+            <g filter="url(#softRealShadow)">
+              <!-- Kettle Handle -->
+              <path d="M 325 105 C 290 105, 290 148, 330 145" stroke="#1A120D" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+              <path d="M 325 105 C 290 105, 290 148, 330 145" stroke="url(#copperReflection)" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+              <!-- Kettle Body -->
+              <path d="M 335 98 L 395 98 C 402 98, 407 103, 404 110 L 398 142 C 395 150, 386 154, 376 154 L 344 154 C 334 154, 327 150, 325 142 L 320 110 C 318 103, 325 98, 335 98 Z" fill="url(#kettleBodyMetal)" stroke="#5E402E" stroke-width="0.8"/>
+
+              <!-- Kettle Metallic Highlights -->
+              <path d="M 342 100 L 334 152" stroke="rgba(255,255,255,0.25)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M 352 100 L 347 152" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-linecap="round"/>
+
+              <!-- Kettle Lid & Knob -->
+              <ellipse cx="365" cy="98" rx="30" ry="5" fill="#1A120D" stroke="url(#copperReflection)" stroke-width="1.2"/>
+              <circle cx="365" cy="92" r="4" fill="url(#copperReflection)"/>
+
+              <!-- Gooseneck Spout (Ending at X=285 Y=175) -->
+              <path d="M 395 122 C 425 122, 432 100, 287 172 L 285 175" stroke="url(#kettleBodyMetal)" stroke-width="6.5" stroke-linecap="round" fill="none"/>
+              <path d="M 395 122 C 425 122, 432 100, 287 172 L 285 175" stroke="#140C07" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+              <path d="M 395 120 C 424 120, 430 99, 286 170" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+            </g>
+          </g>
+
+          <!-- 6. Atmospheric Steam Wisps -->
+          <g class="steam-group" id="steamGroup" opacity="0">
+            <path class="steam-strand steam-strand-1" d="M 240 280 C 230 250, 250 220, 240 190" stroke="rgba(255, 245, 225, 0.28)" stroke-width="11" stroke-linecap="round" fill="none" filter="blur(4.5px)"/>
+            <path class="steam-strand steam-strand-2" d="M 255 280 C 265 245, 245 215, 260 180" stroke="rgba(255, 245, 225, 0.32)" stroke-width="15" stroke-linecap="round" fill="none" filter="blur(5.5px)"/>
+            <path class="steam-strand steam-strand-3" d="M 268 280 C 258 250, 275 220, 265 185" stroke="rgba(255, 245, 225, 0.22)" stroke-width="10" stroke-linecap="round" fill="none" filter="blur(4px)"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="hero-layout-grid">
+          <!-- Left Column: Hero Brand Messaging Layered Over Scene -->
+          <div class="hero-content">
+            <div class="hero-badge-wrap" id="heroBadge">
+              <span class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                EST. 2021 — MUMBAI / MILAN
+              </span>
+            </div>
+
+            <h1 class="hero-title" id="heroTitle">
+              <span class="title-line" id="titleLine1">Where Modern Coffee</span><br />
+              <span class="title-line" id="titleLine2">Meets Culinary <span class="accent-text">Artistry.</span></span>
+            </h1>
+
+            <p class="hero-subtitle" id="heroSubtitle">
+              Hand-selected single-origin coffees, 72-hour laminated sourdough viennoiserie, and slow-living brunch curated inside an architectural sanctuary of warm aesthetics.
+            </p>
+
+            <div class="hero-actions" id="heroActions">
+              <a href="#menu" class="btn btn-primary">
+                <span>Explore Signature Menu</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+
+              <a href="#reservation" class="btn btn-outline-light">
+                <span>Reserve Your Table</span>
+              </a>
+            </div>
+
+            <!-- Quick Info Bar -->
+            <div class="hero-info-bar" id="heroInfoBar">
+              <div class="info-item">
+                <div class="info-icon">☕</div>
+                <div>
+                  <div class="info-text-heading">Micro-Lot Beans</div>
+                  <div class="info-text-sub">Panama Geisha &amp; Yirgacheffe</div>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">🥐</div>
+                <div>
+                  <div class="info-text-heading">Fresh Bake</div>
+                  <div class="info-text-sub">Daily at 6:00 AM</div>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">📍</div>
+                <div>
+                  <div class="info-text-heading">Atelier Location</div>
+                  <div class="info-text-sub">482 Atelier Way, Bandra West</div>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">🕒</div>
+                <div>
+                  <div class="info-text-heading">Operating Hours</div>
+                  <div class="info-text-sub">7:00 AM – 7:00 PM Daily</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. ABOUT THE CAFE
+         ========================================================================== -->
+    <section class="section theme-light" id="about">
+      <div class="container">
+        <div class="about-grid reveal-on-scroll">
+          <!-- Visual Media -->
+          <div class="about-images-wrap">
+            <div class="about-img-main">
+              <img src="assets/images/about_barista.jpg" alt="Barista pouring artisanal latte art at Maison Elan">
+            </div>
+            <div class="about-floating-card">
+              <div class="floating-card-number">100%</div>
+              <div class="floating-card-text">Direct Trade Single Origin Arabica Beans</div>
+            </div>
+          </div>
+
+          <!-- Text Narrative -->
+          <div class="about-content">
+            <div class="sub-tag no-dash">Our Philosophy</div>
+            <h2 class="section-title">Sourced with Intention, Crafted with Passion.</h2>
+            
+            <p class="about-lead">
+              At Maison Élan, coffee is not merely a morning ritual—it is a sensory dialogue between master roasters, ethical farmers, and discerning palates.
+            </p>
+
+            <p class="about-description">
+              Nestled in the heart of the design district, our space combines Scandinavian minimalist warmth with classic European cafe culture. We source exclusively from micro-farms that practice regenerative agriculture, hand-roasting small batches weekly to highlight the floral, fruity, and chocolate notes intrinsic to each bean's terroir.
+            </p>
+
+            <!-- Feature Pillars -->
+            <div class="about-pillars">
+              <div class="pillar-item">
+                <div class="pillar-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                  Custom Roasts
+                </div>
+                <div class="pillar-desc">Micro-batches roasted on custom cast-iron drum roasters.</div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path></svg>
+                  French Butter Pastry
+                </div>
+                <div class="pillar-desc">72-hour lamination using imported Normandy AOP butter.</div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+                  Slow Brunch
+                </div>
+                <div class="pillar-desc">Artisanal farm-to-table breakfast served until late afternoon.</div>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  Zero Waste Ethos
+                </div>
+                <div class="pillar-desc">Compostable coffee grounds and sustainably managed supply.</div>
+              </div>
+            </div>
+
+            <a href="#experience" class="btn btn-secondary">
+              <span>Discover Our Roasting Ritual</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. SIGNATURE MENU
+         ========================================================================== -->
+    <section class="section theme-secondary" id="menu">
+      <div class="container">
+        <div class="section-header">
+          <div class="sub-tag">Curated Offerings</div>
+          <h2 class="section-title">The Signature Menu</h2>
+          <p class="section-subtitle">Each item is thoughtfully paired to balance flavor profiles, texture, and visual elegance.</p>
+        </div>
+
+        <!-- Menu Filter Tabs -->
+        <div class="menu-tabs-wrapper">
+          <div class="menu-tabs">
+            <button class="tab-btn active" data-category="all">All Items</button>
+            <button class="tab-btn" data-category="coffee">Espresso &amp; Pour-Over</button>
+            <button class="tab-btn" data-category="bakery">Artisanal Bakery</button>
+            <button class="tab-btn" data-category="brunch">All-Day Brunch</button>
+            <button class="tab-btn" data-category="dessert">Signature Desserts</button>
+          </div>
+        </div>
+
+        <!-- Menu Cards Grid -->
+        <div class="menu-grid reveal-stagger">
+          <!-- Item 1 -->
+          <div class="menu-item-card" data-category="coffee">
+            <div>
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Panama Geisha Pour-Over</h3>
+                <span class="menu-item-price">₹650</span>
+              </div>
+              <p class="menu-item-desc">Extracted via V60. Delicate jasmine floral bouquet, sweet bergamot finish, silky peach tea body.</p>
+            </div>
+            <div class="menu-item-meta">
+              <span class="badge badge-gold">Micro-Lot Reserve</span>
+              <span class="notes-pill">Origin: Boquete, Panama (1800m)</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="menu-item-card" data-category="coffee">
+            <div>
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Smoked Sea Salt Caramel Latte</h3>
+                <span class="menu-item-price">₹380</span>
+              </div>
+              <p class="menu-item-desc">Double ristretto, house-brewed caramel sauce, Maldon sea salt, micro-foamed oat milk.</p>
+            </div>
+            <div class="menu-item-meta">
+              <span class="badge badge-caramel">Barista Favorite</span>
+              <span class="notes-pill">Served Hot or Over Clear Ice</span>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="menu-item-card" data-category="bakery">
+            <div>
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Pistachio &amp; Raspberry Croissant</h3>
+                <span class="menu-item-price">₹420</span>
+              </div>
+              <p class="menu-item-desc">72-hour laminated French butter pastry filled with Sicilian pistachio praline cream &amp; tart raspberry glaze.</p>
+            </div>
+            <div class="menu-item-meta">
+              <span class="badge badge-espresso">Freshly Baked</span>
+              <span class="notes-pill">Contains Nuts &amp; Dairy</span>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="menu-item-card" data-category="brunch">
+            <div>
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Truffled Egg &amp; Avocado Tartine</h3>
+                <span class="menu-item-price">₹750</span>
+              </div>
+              <p class="menu-item-desc">Hass avocado on toasted sourdough, double poached heritage eggs, black truffle oil, dukkah, micro herbs.</p>
+            </div>
+            <div class="menu-item-meta">
+              <span class="badge badge-caramel">Chef's Signature</span>
+              <span class="notes-pill">Vegetarian Option Available</span>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="menu-item-card" data-category="coffee">
+            <div>
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Nitro Velvet Cold Brew</h3>
+                <span class="menu-item-price">₹360</span>
+              </div>
+              <p class="menu-item-desc">18-hour cold steeped Yirgacheffe infused with pure nitrogen for a cascading Guinness-like creaminess.</p>
+            </div>
+            <div class="menu-item-meta">
+              <span class="badge badge-gold">Single Origin</span>
+              <span class="notes-pill">Notes: Blueberry &amp; Dark Cocoa</span>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="menu-item-card" data-category="dessert">
+            <div>
+              <div class="menu-item-header">
+                <h3 class="menu-item-name">Espresso Gold Leaf Dark Tart</h3>
+                <span class="menu-item-price">₹550</span>
+              </div>
+              <p class="menu-item-desc">Valrhona 70% dark chocolate ganache spiked with ristretto espresso, edible 24k gold, smoked salt flake.</p>
+            </div>
+            <div class="menu-item-meta">
+              <span class="badge badge-gold">Decadent</span>
+              <span class="notes-pill">Gluten-Free Crust</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. CAFE EXPERIENCE SECTION
+         ========================================================================== -->
+    <section class="section theme-dark" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="sub-tag">Atmosphere &amp; Craft</div>
+          <h2 class="section-title">The Atelier Experience</h2>
+          <p class="section-subtitle">Every detail is designed to foster presence, conversation, and quiet luxury.</p>
+        </div>
+
+        <div class="experience-grid">
+          <div class="exp-card">
+            <div class="exp-number">01</div>
+            <h3 class="exp-title">Precision Extraction</h3>
+            <p class="exp-desc">Custom Synesso MVP Hydra machines calibrated to custom water mineral ratios, extracting the ultimate sweetness from single origin roasts.</p>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-number">02</div>
+            <h3 class="exp-title">Master Patisserie</h3>
+            <p class="exp-desc">Our pastry atelier begins at 3:00 AM every morning. We laminate butter layers by hand to produce light, shatteringly crisp crusts.</p>
+          </div>
+
+          <div class="exp-card">
+            <div class="exp-number">03</div>
+            <h3 class="exp-title">Aesthetic Haven</h3>
+            <p class="exp-desc">Acoustically damp travertine walls, bespoke white oak furnishings, and natural daylight create a calming respite from city noise.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. FEATURED ITEMS
+         ========================================================================== -->
+    <section class="section theme-light" id="featured">
+      <div class="container">
+        <div class="section-header">
+          <div class="sub-tag">Seasonal Highlights</div>
+          <h2 class="section-title">Featured Culinary Creations</h2>
+          <p class="section-subtitle">Discover our most celebrated pairings created by our head barista and executive pastry chef.</p>
+        </div>
+
+        <div class="featured-grid">
+          <!-- Featured 1 -->
+          <div class="featured-card">
+            <div class="featured-img-box">
+              <img src="assets/images/dish_pourover.jpg" alt="Chemex Specialty Pour Over Coffee">
+              <span class="featured-tag">Craft Coffee</span>
+            </div>
+            <div class="featured-body">
+              <div class="featured-title-wrap">
+                <h3 class="featured-item-title">Artisan Chemex Pour-Over</h3>
+                <span class="featured-item-price">₹520</span>
+              </div>
+              <p class="featured-item-desc">Slow-steeped Ethiopian Yirgacheffe with notes of elderflower and ripe stone fruit.</p>
+              <div class="featured-footer">
+                <div class="featured-rating">
+                  <span class="star-icon">★</span>
+                  <span>4.9 (140+ reviews)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured 2 -->
+          <div class="featured-card">
+            <div class="featured-img-box">
+              <img src="assets/images/dish_pastry.jpg" alt="Almond Croissant & Espresso">
+              <span class="featured-tag">Morning Classic</span>
+            </div>
+            <div class="featured-body">
+              <div class="featured-title-wrap">
+                <h3 class="featured-item-title">Toasted Almond Croissant</h3>
+                <span class="featured-item-price">₹380</span>
+              </div>
+              <p class="featured-item-desc">Double-baked with vanilla frangipane cream, flaked almonds, and organic powdered sugar.</p>
+              <div class="featured-footer">
+                <div class="featured-rating">
+                  <span class="star-icon">★</span>
+                  <span>5.0 (210+ reviews)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured 3 -->
+          <div class="featured-card">
+            <div class="featured-img-box">
+              <img src="assets/images/dish_brunch.jpg" alt="Avocado Toast Benedict">
+              <span class="featured-tag">Brunch Specialty</span>
+            </div>
+            <div class="featured-body">
+              <div class="featured-title-wrap">
+                <h3 class="featured-item-title">Avocado Heritage Toast</h3>
+                <span class="featured-item-price">₹680</span>
+              </div>
+              <p class="featured-item-desc">Rustic country loaf, creamy avocado mash, poached farmer's egg, and micro edible flowers.</p>
+              <div class="featured-footer">
+                <div class="featured-rating">
+                  <span class="star-icon">★</span>
+                  <span>4.9 (320+ reviews)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured 4 -->
+          <div class="featured-card">
+            <div class="featured-img-box">
+              <img src="assets/images/dish_dessert.jpg" alt="Dark Chocolate Espresso Ganache Tart">
+              <span class="featured-tag">Dessert Atelier</span>
+            </div>
+            <div class="featured-body">
+              <div class="featured-title-wrap">
+                <h3 class="featured-item-title">Mocha Gold Leaf Tart</h3>
+                <span class="featured-item-price">₹550</span>
+              </div>
+              <p class="featured-item-desc">Rich 70% dark chocolate espresso ganache crust finished with Maldon salt flakes and 24k gold leaf.</p>
+              <div class="featured-footer">
+                <div class="featured-rating">
+                  <span class="star-icon">★</span>
+                  <span>4.9 (185+ reviews)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. GALLERY
+         ========================================================================== -->
+    <section class="section theme-secondary" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <div class="sub-tag">Visual Storytelling</div>
+          <h2 class="section-title">Moments at Maison Élan</h2>
+          <p class="section-subtitle">Click any photograph to view in high-resolution detail.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="assets/images/hero_bg.jpg" alt="Interior Vibe">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Main Lounge &amp; Bar</span>
+              <span class="gallery-sub">Interior Architecture</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/about_barista.jpg" alt="Latte Art Pour">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Latte Craftsmanship</span>
+              <span class="gallery-sub">Barista Espresso</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/dish_pourover.jpg" alt="Pour Over Coffee">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">V60 &amp; Chemex Slow Bar</span>
+              <span class="gallery-sub">Roastery Brews</span>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="assets/images/dish_pastry.jpg" alt="French Croissant">
+            <div class="gallery-overlay">
+              <span class="gallery-caption">Morning Pastry Case</span>
+              <span class="gallery-sub">Viennoiserie</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. TESTIMONIALS & PRESS
+         ========================================================================== -->
+    <section class="section theme-light" id="testimonials">
+      <div class="container">
+        <!-- Press Quotes Bar -->
+        <div class="press-bar">
+          <div class="press-quote">
+            <p class="press-text">“The single most refined espresso experience in Northern California.”</p>
+            <span class="press-source">MICHELIN GUIDE SELECTION</span>
+          </div>
+
+          <div class="press-quote">
+            <p class="press-text">“A masterclass in Scandinavian warmth &amp; French pastry precision.”</p>
+            <span class="press-source">VOGUE LIVING</span>
+          </div>
+        </div>
+
+        <div class="section-header">
+          <div class="sub-tag">Guest Reviews</div>
+          <h2 class="section-title">Loved by Coffee Connoisseurs</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">“Maison Élan has completely elevated my morning coffee standards. The Panama Geisha pour-over was unbelievable—delicate notes of jasmine and peach tea. Plus, the pastry is pure heaven.”</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">CL</div>
+              <div>
+                <div class="author-name">Claire Laurent</div>
+                <div class="author-role">Design Director &amp; Local Resident</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">“The interior aesthetics alone make you want to stay for hours. We booked the sunroom terrace for a weekend brunch and the truffled egg tartine was out of this world!”</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MK</div>
+              <div>
+                <div class="author-name">Marcus Vance</div>
+                <div class="author-role">Food Critic, Culinary Digest</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">“From the warm welcome to the custom ceramic cups, everything feels deeply intentional. Maison Élan is my go-to spot for meeting clients and quiet afternoon reading.”</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SR</div>
+              <div>
+                <div class="author-name">Sophia Reynolds</div>
+                <div class="author-role">Architect &amp; Specialty Coffee Enthusiast</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. RESERVATION / BOOKING CTA
+         ========================================================================== -->
+    <section class="section theme-dark" id="reservation">
+      <div class="container reservation-container">
+        <div class="section-header">
+          <div class="sub-tag">Table Reservations</div>
+          <h2 class="section-title">Reserve Your Atelier Experience</h2>
+          <p class="section-subtitle">Secure your table in our main lounge, sunroom terrace, or private coffee bar.</p>
+        </div>
+
+        <div class="reservation-box">
+          <form class="reservation-form" id="reservationForm">
+            <!-- Full Name -->
+            <div class="form-group">
+              <label class="form-label" for="resName">Full Name *</label>
+              <input type="text" id="resName" class="form-input" placeholder="e.g. Julian Hayes" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label class="form-label" for="resEmail">Email Address *</label>
+              <input type="email" id="resEmail" class="form-input" placeholder="e.g. julian@example.com" required>
+            </div>
+
+            <!-- Guests -->
+            <div class="form-group">
+              <label class="form-label" for="resGuests">Number of Guests</label>
+              <select id="resGuests" class="form-select">
+                <option value="1 Guest">1 Guest (Solo Coffee Bar)</option>
+                <option value="2 Guests" selected>2 Guests (Standard Table)</option>
+                <option value="4 Guests">4 Guests (Lounge Seating)</option>
+                <option value="6 Guests">6 Guests (Private Dining)</option>
+                <option value="8+ Guests">8+ Guests (Event Inquiry)</option>
+              </select>
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+              <label class="form-label" for="resDate">Preferred Date</label>
+              <input type="date" id="resDate" class="form-input" required>
+            </div>
+
+            <!-- Time -->
+            <div class="form-group">
+              <label class="form-label" for="resTime">Preferred Time Slot</label>
+              <select id="resTime" class="form-select">
+                <option value="08:00 AM">08:00 AM — Morning Tasting</option>
+                <option value="10:00 AM">10:00 AM — Breakfast</option>
+                <option value="11:30 AM" selected>11:30 AM — Prime Brunch</option>
+                <option value="02:00 PM">02:00 PM — Afternoon Coffee</option>
+                <option value="04:30 PM">04:30 PM — Golden Hour Aperitivo</option>
+              </select>
+            </div>
+
+            <!-- Seating Preference Pills -->
+            <div class="form-group full-width">
+              <label class="form-label">Seating Preference</label>
+              <input type="hidden" id="seatingAreaInput" value="Main Atelier Lounge">
+              <div class="seating-pills">
+                <button type="button" class="seating-pill-btn active" data-value="Main Atelier Lounge">Main Atelier Lounge</button>
+                <button type="button" class="seating-pill-btn" data-value="Sunroom Terrace">Sunroom Terrace</button>
+                <button type="button" class="seating-pill-btn" data-value="Barista Bar counter">Barista Bar Counter</button>
+                <button type="button" class="seating-pill-btn" data-value="Quiet Corner Nook">Quiet Corner Nook</button>
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="form-group full-width" style="margin-top: 1rem;">
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.1rem;">
+                <span>Confirm Reservation Booking</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. LOCATION & OPENING HOURS
+         ========================================================================== -->
+    <section class="section theme-light" id="location">
+      <div class="container">
+        <div class="section-header">
+          <div class="sub-tag">Visit Us</div>
+          <h2 class="section-title">Hours &amp; Location</h2>
+          <p class="section-subtitle">Located in Mumbai's prime design corridor with valet parking available.</p>
+        </div>
+
+        <div class="location-grid">
+          <!-- Hours & Details Card -->
+          <div class="hours-card">
+            <h3 class="section-title" style="font-size: 1.75rem; margin-bottom: 1.5rem;">Operating Hours</h3>
+            
+            <ul class="hours-list">
+              <li class="hours-row">
+                <span class="hours-day">Monday – Friday</span>
+                <span class="hours-time">7:00 AM – 7:00 PM</span>
+              </li>
+              <li class="hours-row">
+                <span class="hours-day">Saturday &amp; Sunday</span>
+                <span class="hours-time highlight">8:00 AM – 8:00 PM (Brunch until 4 PM)</span>
+              </li>
+              <li class="hours-row">
+                <span class="hours-day">Public Holidays</span>
+                <span class="hours-time">8:00 AM – 4:00 PM</span>
+              </li>
+            </ul>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-text">
+                  <strong>Address</strong>
+                  482 Atelier Way, Bandra West, Mumbai, Maharashtra 400050
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">📞</div>
+                <div class="contact-text">
+                  <strong>Direct Inquiries</strong>
+                  +91 98200 84190 • concierge@maisonelan.com
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">🚗</div>
+                <div class="contact-text">
+                  <strong>Parking &amp; Transit</strong>
+                  Complimentary 2-hour valet parking in front of atelier.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Visual Map Box -->
+          <div class="map-mock-box">
+            <div class="map-bg-pattern"></div>
+            
+            <div class="sub-tag" style="color: var(--color-caramel);">LOCATION PREVIEW</div>
+
+            <div class="map-pin-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Maison Élan Atelier — 482 Atelier Way</span>
+            </div>
+
+            <div class="map-directions-btn">
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light" style="width: 100%;">
+                <span>Open in Google Maps</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       11. FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div>
+          <div class="brand-logo">
+            <svg class="logo-mark" width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="14.5" stroke="currentColor" stroke-width="1.2" stroke-opacity="0.35"/>
+              <path d="M11 11 H21 V18 C21 21 18.5 22.5 16 22.5 C13.5 22.5 11 21 11 18 Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div class="logo-text-group">
+              <span class="logo-title">MAISON ÉLAN</span>
+              <span class="logo-subtitle">COFFEE &amp; ATELIER</span>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            An elevated sanctuary dedicated to single-origin micro-lot coffees, artisanal French viennoiserie, and mindful hospitality.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Instagram">IG</a>
+            <a href="#" class="social-btn" aria-label="TikTok">TT</a>
+            <a href="#" class="social-btn" aria-label="Spotify">SP</a>
+            <a href="#" class="social-btn" aria-label="Pinterest">PN</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#about" class="footer-link">Our Coffee Philosophy</a></li>
+            <li><a href="#menu" class="footer-link">Signature Menu &amp; Roasts</a></li>
+            <li><a href="#experience" class="footer-link">The Roastery Experience</a></li>
+            <li><a href="#featured" class="footer-link">Chef's Seasonal Pairings</a></li>
+            <li><a href="#gallery" class="footer-link">Atmosphere Gallery</a></li>
+            <li><a href="#reservation" class="footer-link">Book a Table</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Newsletter -->
+        <div>
+          <h4 class="footer-title">Join The Élan Society</h4>
+          <div class="newsletter-box">
+            <p class="newsletter-desc">Subscribe to receive exclusive invitations to private micro-lot tasting events and seasonal bakery releases.</p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input type="email" class="newsletter-input" placeholder="Enter your email..." required>
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Maison Élan Atelier Inc. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" class="footer-link">Privacy Policy</a>
+          <a href="#" class="footer-link">Terms of Service</a>
+          <a href="#" class="footer-link">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS
+       ========================================================================== -->
+  <!-- Reservation Confirmation Modal -->
+  <div class="modal" id="reservationModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card">
+      <div class="modal-icon-success">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      </div>
+      <h3 class="modal-title">Table Reserved</h3>
+      <p class="modal-body-text">We look forward to welcoming you to Maison Élan. A confirmation has been sent to your email.</p>
+
+      <div class="modal-summary-box">
+        <div class="summary-row">
+          <span class="summary-label">Booking Reference:</span>
+          <span class="summary-val" id="summaryRef">ÉLAN-8492</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Guest Name:</span>
+          <span class="summary-val" id="summaryName">Julian Hayes</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Party &amp; Time:</span>
+          <span class="summary-val" id="summaryDetails">2 Guests • Tomorrow at 11:30 AM</span>
+        </div>
+        <div class="summary-row">
+          <span class="summary-label">Seating Area:</span>
+          <span class="summary-val" id="summaryArea">Main Atelier Lounge</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="closeModalBtn" style="width: 100%;">Done</button>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="modal" id="galleryModal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card" style="max-width: 800px; padding: 1.5rem; background-color: var(--color-dark-coffee);">
+      <img id="lightboxImg" src="" alt="Expanded View" style="width: 100%; border-radius: var(--radius-md); max-height: 70vh; object-fit: contain; margin-bottom: 1rem;">
+      <h4 id="lightboxCaption" style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-warm-white); margin-bottom: 1rem;"></h4>
+      <button class="btn btn-outline-light btn-sm" id="closeGalleryBtn">Close Preview</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
