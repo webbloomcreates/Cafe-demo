@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initMobileDrawer();
   initMenuTabs();
+  initCraftModal();
   initReservationForm();
   initGalleryLightbox();
   initNewsletterForm();
@@ -76,33 +77,83 @@ function initMobileDrawer() {
 }
 
 /* ==========================================================================
-   3. MENU TAB FILTERING
+   3. MENU TAB FILTERING & LIVE SEARCH
    ========================================================================== */
 function initMenuTabs() {
   const tabBtns = document.querySelectorAll('.menu-tabs .tab-btn');
   const menuItems = document.querySelectorAll('.menu-item-card');
+  const searchInput = document.getElementById('menuSearchInput');
 
-  if (!tabBtns.length || !menuItems.length) return;
+  if (!menuItems.length) return;
+
+  let activeCategory = 'all';
+
+  function filterMenu() {
+    const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+    menuItems.forEach(item => {
+      const itemCat = item.getAttribute('data-category');
+      const text = item.textContent.toLowerCase();
+
+      const matchesCat = activeCategory === 'all' || itemCat === activeCategory;
+      const matchesSearch = !query || text.includes(query);
+
+      if (matchesCat && matchesSearch) {
+        item.style.display = 'flex';
+        item.style.opacity = '1';
+      } else {
+        item.style.display = 'none';
+        item.style.opacity = '0';
+      }
+    });
+  }
 
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       tabBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
-      const category = btn.getAttribute('data-category');
-
-      menuItems.forEach(item => {
-        const itemCat = item.getAttribute('data-category');
-        if (category === 'all' || itemCat === category) {
-          item.style.display = 'flex';
-          item.style.opacity = '1';
-        } else {
-          item.style.display = 'none';
-          item.style.opacity = '0';
-        }
-      });
+      activeCategory = btn.getAttribute('data-category');
+      filterMenu();
     });
   });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', filterMenu);
+  }
+}
+
+/* ==========================================================================
+   3B. CRAFT STORY DETAIL MODAL
+   ========================================================================== */
+function initCraftModal() {
+  const craftBtns = document.querySelectorAll('.btn-craft-details');
+  const modal = document.getElementById('craftModal');
+  const backdrop = document.getElementById('craftModalBackdrop');
+  const closeBtn = document.getElementById('closeCraftBtn');
+  const modalTitle = document.getElementById('craftModalTitle');
+  const modalDesc = document.getElementById('craftModalDesc');
+  const modalImg = document.getElementById('craftModalImg');
+
+  if (!modal || !craftBtns.length) return;
+
+  craftBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const title = btn.getAttribute('data-title');
+      const desc = btn.getAttribute('data-desc');
+      const img = btn.getAttribute('data-img');
+
+      if (modalTitle) modalTitle.textContent = title || 'Atelier Craft Story';
+      if (modalDesc) modalDesc.textContent = desc || '';
+      if (modalImg && img) modalImg.src = img;
+
+      modal.classList.add('active');
+    });
+  });
+
+  const closeModal = () => modal.classList.remove('active');
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (backdrop) backdrop.addEventListener('click', closeModal);
 }
 
 /* ==========================================================================

@@ -42,7 +42,6 @@
         <ul class="nav-links">
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#menu" class="nav-link">Menu</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#featured" class="nav-link">Craft</a></li>
           <li><a href="#gallery" class="nav-link">Gallery</a></li>
           <li><a href="#testimonials" class="nav-link">Accolades</a></li>
@@ -82,7 +81,6 @@
       <ul class="mobile-nav-links">
         <li><a href="#about" class="mobile-nav-link">About Us</a></li>
         <li><a href="#menu" class="mobile-nav-link">Signature Menu</a></li>
-        <li><a href="#experience" class="mobile-nav-link">The Experience</a></li>
         <li><a href="#featured" class="mobile-nav-link">Craft Specialties</a></li>
         <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
         <li><a href="#testimonials" class="mobile-nav-link">Accolades</a></li>
@@ -118,7 +116,7 @@
             </div>
 
             <h1 class="hero-title" id="heroTitle">
-              <span class="title-line" id="titleLine1">Where Modern Coffee</span><br />
+              <span class="title-line" id="titleLine1">Where Modern Coffee</span>
               <span class="title-line" id="titleLine2">Meets Culinary <span class="accent-text">Artistry.</span></span>
             </h1>
 
@@ -257,109 +255,159 @@
         <div class="section-header">
           <div class="sub-tag">Curated Offerings</div>
           <h2 class="section-title">The Signature Menu</h2>
-          <p class="section-subtitle">Each item is thoughtfully paired to balance flavor profiles, texture, and visual elegance.</p>
+          <p class="section-subtitle">Each creation is meticulously crafted to balance flavor profiles, texture, and visual elegance.</p>
         </div>
 
-        <!-- Menu Filter Tabs -->
-        <div class="menu-tabs-wrapper">
-          <div class="menu-tabs">
-            <button class="tab-btn active" data-category="all">All Items</button>
-            <button class="tab-btn" data-category="coffee">Espresso &amp; Pour-Over</button>
-            <button class="tab-btn" data-category="bakery">Artisanal Bakery</button>
-            <button class="tab-btn" data-category="brunch">All-Day Brunch</button>
-            <button class="tab-btn" data-category="dessert">Signature Desserts</button>
+        <!-- Filter & Search Bar Controls -->
+        <div class="menu-controls-wrapper">
+          <div class="menu-search-box">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="menuSearchInput" placeholder="Search coffees, pastries, ingredients..." aria-label="Search menu items">
+          </div>
+
+          <div class="menu-tabs-wrapper">
+            <div class="menu-tabs">
+              <button class="tab-btn active" data-category="all">All Items</button>
+              <button class="tab-btn" data-category="coffee">☕ Coffee &amp; Pour-Over</button>
+              <button class="tab-btn" data-category="bakery">🥐 Artisanal Bakery</button>
+              <button class="tab-btn" data-category="brunch">🍳 All-Day Brunch</button>
+              <button class="tab-btn" data-category="dessert">✨ Signature Desserts</button>
+            </div>
           </div>
         </div>
 
         <!-- Menu Cards Grid -->
-        <div class="menu-grid reveal-stagger">
+        <div class="menu-grid reveal-stagger" id="menuGrid">
           <!-- Item 1 -->
           <div class="menu-item-card" data-category="coffee">
-            <div>
+            <div class="menu-item-top">
               <div class="menu-item-header">
-                <h3 class="menu-item-name">Panama Geisha Pour-Over</h3>
+                <span class="badge badge-gold">Micro-Lot Reserve</span>
                 <span class="menu-item-price">₹650</span>
               </div>
+              <h3 class="menu-item-name">Panama Geisha Pour-Over</h3>
               <p class="menu-item-desc">Extracted via V60. Delicate jasmine floral bouquet, sweet bergamot finish, silky peach tea body.</p>
             </div>
-            <div class="menu-item-meta">
-              <span class="badge badge-gold">Micro-Lot Reserve</span>
-              <span class="notes-pill">Origin: Boquete, Panama (1800m)</span>
+            <div class="menu-item-footer">
+              <span class="notes-pill">📍 Boquete, Panama (1800m)</span>
+              <div class="flavor-tags">
+                <span class="flavor-chip">Jasmine</span>
+                <span class="flavor-chip">Bergamot</span>
+                <span class="flavor-chip">Peach</span>
+              </div>
             </div>
           </div>
 
           <!-- Item 2 -->
           <div class="menu-item-card" data-category="coffee">
-            <div>
+            <div class="menu-item-top">
               <div class="menu-item-header">
-                <h3 class="menu-item-name">Smoked Sea Salt Caramel Latte</h3>
+                <span class="badge badge-caramel">Barista Favorite</span>
                 <span class="menu-item-price">₹380</span>
               </div>
+              <h3 class="menu-item-name">Smoked Sea Salt Caramel Latte</h3>
               <p class="menu-item-desc">Double ristretto, house-brewed caramel sauce, Maldon sea salt, micro-foamed oat milk.</p>
             </div>
-            <div class="menu-item-meta">
-              <span class="badge badge-caramel">Barista Favorite</span>
-              <span class="notes-pill">Served Hot or Over Clear Ice</span>
+            <div class="menu-item-footer">
+              <span class="notes-pill">❄️ Hot or Over Clear Ice</span>
+              <div class="flavor-tags">
+                <span class="flavor-chip">Smoked Salt</span>
+                <span class="flavor-chip">Caramel</span>
+                <span class="flavor-chip">Oat Milk</span>
+              </div>
             </div>
           </div>
 
           <!-- Item 3 -->
           <div class="menu-item-card" data-category="bakery">
-            <div>
+            <div class="menu-item-top">
               <div class="menu-item-header">
-                <h3 class="menu-item-name">Pistachio &amp; Raspberry Croissant</h3>
+                <span class="badge badge-espresso">Freshly Baked</span>
                 <span class="menu-item-price">₹420</span>
               </div>
+              <h3 class="menu-item-name">Pistachio &amp; Raspberry Croissant</h3>
               <p class="menu-item-desc">72-hour laminated French butter pastry filled with Sicilian pistachio praline cream &amp; tart raspberry glaze.</p>
             </div>
-            <div class="menu-item-meta">
-              <span class="badge badge-espresso">Freshly Baked</span>
-              <span class="notes-pill">Contains Nuts &amp; Dairy</span>
+            <div class="menu-item-footer">
+              <span class="notes-pill">🥐 Normandy AOP Butter</span>
+              <div class="flavor-tags">
+                <span class="flavor-chip">Pistachio</span>
+                <span class="flavor-chip">Raspberry</span>
+                <span class="flavor-chip">Flaky</span>
+              </div>
             </div>
           </div>
 
           <!-- Item 4 -->
           <div class="menu-item-card" data-category="brunch">
-            <div>
+            <div class="menu-item-top">
               <div class="menu-item-header">
-                <h3 class="menu-item-name">Truffled Egg &amp; Avocado Tartine</h3>
+                <span class="badge badge-caramel">Chef's Signature</span>
                 <span class="menu-item-price">₹750</span>
               </div>
+              <h3 class="menu-item-name">Truffled Egg &amp; Avocado Tartine</h3>
               <p class="menu-item-desc">Hass avocado on toasted sourdough, double poached heritage eggs, black truffle oil, dukkah, micro herbs.</p>
             </div>
-            <div class="menu-item-meta">
-              <span class="badge badge-caramel">Chef's Signature</span>
-              <span class="notes-pill">Vegetarian Option Available</span>
+            <div class="menu-item-footer">
+              <span class="notes-pill">🥑 Organic Sourdough</span>
+              <div class="flavor-tags">
+                <span class="flavor-chip">Black Truffle</span>
+                <span class="flavor-chip">Avocado</span>
+                <span class="flavor-chip">Poached Egg</span>
+              </div>
             </div>
           </div>
 
           <!-- Item 5 -->
           <div class="menu-item-card" data-category="coffee">
-            <div>
+            <div class="menu-item-top">
               <div class="menu-item-header">
-                <h3 class="menu-item-name">Nitro Velvet Cold Brew</h3>
+                <span class="badge badge-gold">Single Origin</span>
                 <span class="menu-item-price">₹360</span>
               </div>
+              <h3 class="menu-item-name">Nitro Velvet Cold Brew</h3>
               <p class="menu-item-desc">18-hour cold steeped Yirgacheffe infused with pure nitrogen for a cascading Guinness-like creaminess.</p>
             </div>
-            <div class="menu-item-meta">
-              <span class="badge badge-gold">Single Origin</span>
-              <span class="notes-pill">Notes: Blueberry &amp; Dark Cocoa</span>
+            <div class="menu-item-footer">
+              <span class="notes-pill">🇪🇹 Yirgacheffe, Ethiopia</span>
+              <div class="flavor-tags">
+                <span class="flavor-chip">Blueberry</span>
+                <span class="flavor-chip">Cocoa</span>
+                <span class="flavor-chip">Velvet</span>
+              </div>
             </div>
           </div>
 
           <!-- Item 6 -->
           <div class="menu-item-card" data-category="dessert">
-            <div>
+            <div class="menu-item-top">
               <div class="menu-item-header">
-                <h3 class="menu-item-name">Espresso Gold Leaf Dark Tart</h3>
+                <span class="badge badge-gold">Decadent</span>
                 <span class="menu-item-price">₹550</span>
               </div>
+              <h3 class="menu-item-name">Espresso Gold Leaf Dark Tart</h3>
               <p class="menu-item-desc">Valrhona 70% dark chocolate ganache spiked with ristretto espresso, edible 24k gold, smoked salt flake.</p>
             </div>
-            <div class="menu-item-meta">
-              <span class="badge badge-gold">Decadent</span>
-              <span class="notes-pill">Gluten-Free Crust</span>
+            <div class="menu-item-footer">
+              <span class="notes-pill">✨ Edible 24K Gold</span>
+              <div class="flavor-tags">
+                <span class="flavor-chip">70% Valrhona</span>
+                <span class="flavor-chip">Ristretto</span>
+                <span class="flavor-chip">Gluten-Free</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Signature Pairing Spotlight Banner -->
+        <div class="pairing-spotlight-box">
+          <div class="spotlight-content">
+            <span class="sub-tag no-dash">Head Barista &amp; Executive Chef Pairing</span>
+            <h3 class="spotlight-title">The Grand Atelier Pairing</h3>
+            <p class="spotlight-desc">Panama Geisha Pour-Over paired with our 72-Hour Pistachio Raspberry Croissant. The delicate jasmine floral notes elevate the nutty pistachio praline richness.</p>
+            <div class="spotlight-actions">
+              <span class="spotlight-price">Special Pair Price: ₹990 <span class="old-price">₹1,070</span></span>
+              <a href="#reservation" class="btn btn-primary btn-sm">Reserve This Pairing</a>
             </div>
           </div>
         </div>
@@ -367,67 +415,48 @@
     </section>
 
     <!-- ==========================================================================
-         5. CAFE EXPERIENCE SECTION
-         ========================================================================== -->
-    <section class="section theme-dark" id="experience">
-      <div class="container">
-        <div class="section-header">
-          <div class="sub-tag">Atmosphere &amp; Craft</div>
-          <h2 class="section-title">The Atelier Experience</h2>
-          <p class="section-subtitle">Every detail is designed to foster presence, conversation, and quiet luxury.</p>
-        </div>
-
-        <div class="experience-grid">
-          <div class="exp-card">
-            <div class="exp-number">01</div>
-            <h3 class="exp-title">Precision Extraction</h3>
-            <p class="exp-desc">Custom Synesso MVP Hydra machines calibrated to custom water mineral ratios, extracting the ultimate sweetness from single origin roasts.</p>
-          </div>
-
-          <div class="exp-card">
-            <div class="exp-number">02</div>
-            <h3 class="exp-title">Master Patisserie</h3>
-            <p class="exp-desc">Our pastry atelier begins at 3:00 AM every morning. We laminate butter layers by hand to produce light, shatteringly crisp crusts.</p>
-          </div>
-
-          <div class="exp-card">
-            <div class="exp-number">03</div>
-            <h3 class="exp-title">Aesthetic Haven</h3>
-            <p class="exp-desc">Acoustically damp travertine walls, bespoke white oak furnishings, and natural daylight create a calming respite from city noise.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         6. FEATURED ITEMS
+         5. FEATURED ITEMS / CRAFT SPECIALTIES
          ========================================================================== -->
     <section class="section theme-light" id="featured">
       <div class="container">
         <div class="section-header">
-          <div class="sub-tag">Seasonal Highlights</div>
-          <h2 class="section-title">Featured Culinary Creations</h2>
-          <p class="section-subtitle">Discover our most celebrated pairings created by our head barista and executive pastry chef.</p>
+          <div class="sub-tag">Artisanal Mastery</div>
+          <h2 class="section-title">Craft Specialties &amp; Seasonal Highlights</h2>
+          <p class="section-subtitle">Explore our flagship creations, crafted in small batches daily using rare origins and traditional techniques.</p>
         </div>
 
-        <div class="featured-grid">
+        <div class="featured-grid reveal-stagger">
           <!-- Featured 1 -->
           <div class="featured-card">
             <div class="featured-img-box">
               <img src="assets/images/dish_pourover.jpg" alt="Chemex Specialty Pour Over Coffee">
-              <span class="featured-tag">Craft Coffee</span>
+              <span class="featured-tag">Micro-Lot Craft</span>
+              <div class="featured-img-overlay">
+                <span class="craft-altitude">Elevation: 1,800m</span>
+              </div>
             </div>
             <div class="featured-body">
               <div class="featured-title-wrap">
                 <h3 class="featured-item-title">Artisan Chemex Pour-Over</h3>
                 <span class="featured-item-price">₹520</span>
               </div>
-              <p class="featured-item-desc">Slow-steeped Ethiopian Yirgacheffe with notes of elderflower and ripe stone fruit.</p>
+              <p class="featured-item-desc">Slow-steeped Ethiopian Yirgacheffe with notes of elderflower, ripe stone fruit, and honey clarity.</p>
+              
+              <div class="craft-spec-list">
+                <div class="spec-chip">Roast: Light City</div>
+                <div class="spec-chip">Process: Washed</div>
+                <div class="spec-chip">Brew: Chemex V60</div>
+              </div>
+
               <div class="featured-footer">
                 <div class="featured-rating">
                   <span class="star-icon">★</span>
                   <span>4.9 (140+ reviews)</span>
                 </div>
+                <button class="btn-craft-details" data-title="Artisan Chemex Pour-Over" data-desc="Single-origin Yirgacheffe coffee beans grown at 1,800 meters altitude. Hand-poured with precise 93°C water temperature control over 4 minutes for maximum aromatic extraction." data-img="assets/images/dish_pourover.jpg">
+                  <span>Craft Story</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
               </div>
             </div>
           </div>
@@ -436,19 +465,33 @@
           <div class="featured-card">
             <div class="featured-img-box">
               <img src="assets/images/dish_pastry.jpg" alt="Almond Croissant & Espresso">
-              <span class="featured-tag">Morning Classic</span>
+              <span class="featured-tag">72-Hour Pastry</span>
+              <div class="featured-img-overlay">
+                <span class="craft-altitude">Normandy AOP Butter</span>
+              </div>
             </div>
             <div class="featured-body">
               <div class="featured-title-wrap">
                 <h3 class="featured-item-title">Toasted Almond Croissant</h3>
                 <span class="featured-item-price">₹380</span>
               </div>
-              <p class="featured-item-desc">Double-baked with vanilla frangipane cream, flaked almonds, and organic powdered sugar.</p>
+              <p class="featured-item-desc">Double-baked with vanilla frangipane cream, toasted flaked almonds, and organic powdered sugar finish.</p>
+              
+              <div class="craft-spec-list">
+                <div class="spec-chip">Proofing: 72 Hours</div>
+                <div class="spec-chip">Layers: 27 Butter Layers</div>
+                <div class="spec-chip">Fresh at 6:00 AM</div>
+              </div>
+
               <div class="featured-footer">
                 <div class="featured-rating">
                   <span class="star-icon">★</span>
                   <span>5.0 (210+ reviews)</span>
                 </div>
+                <button class="btn-craft-details" data-title="Toasted Almond Croissant" data-desc="Laminated using 100% French Normandy AOP butter. Double baked with slow-roasted almond frangipane and bourbon vanilla pod infusing every flake." data-img="assets/images/dish_pastry.jpg">
+                  <span>Craft Story</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
               </div>
             </div>
           </div>
@@ -457,19 +500,33 @@
           <div class="featured-card">
             <div class="featured-img-box">
               <img src="assets/images/dish_brunch.jpg" alt="Avocado Toast Benedict">
-              <span class="featured-tag">Brunch Specialty</span>
+              <span class="featured-tag">Culinary Atelier</span>
+              <div class="featured-img-overlay">
+                <span class="craft-altitude">Black Truffle Oil</span>
+              </div>
             </div>
             <div class="featured-body">
               <div class="featured-title-wrap">
                 <h3 class="featured-item-title">Avocado Heritage Toast</h3>
                 <span class="featured-item-price">₹680</span>
               </div>
-              <p class="featured-item-desc">Rustic country loaf, creamy avocado mash, poached farmer's egg, and micro edible flowers.</p>
+              <p class="featured-item-desc">Rustic country sourdough loaf, creamy hass avocado mash, poached farmer's egg, and micro edible flowers.</p>
+              
+              <div class="craft-spec-list">
+                <div class="spec-chip">Bread: Organic Sourdough</div>
+                <div class="spec-chip">Eggs: Heritage Farm</div>
+                <div class="spec-chip">Oil: Black Truffle</div>
+              </div>
+
               <div class="featured-footer">
                 <div class="featured-rating">
                   <span class="star-icon">★</span>
                   <span>4.9 (320+ reviews)</span>
                 </div>
+                <button class="btn-craft-details" data-title="Avocado Heritage Toast" data-desc="Sourdough fermented for 36 hours. Topped with freshly crushed Hass avocado, free-range poached eggs, Italian black truffle oil, and house-made Egyptian dukkah." data-img="assets/images/dish_brunch.jpg">
+                  <span>Craft Story</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
               </div>
             </div>
           </div>
@@ -478,19 +535,33 @@
           <div class="featured-card">
             <div class="featured-img-box">
               <img src="assets/images/dish_dessert.jpg" alt="Dark Chocolate Espresso Ganache Tart">
-              <span class="featured-tag">Dessert Atelier</span>
+              <span class="featured-tag">24K Gold Atelier</span>
+              <div class="featured-img-overlay">
+                <span class="craft-altitude">70% Valrhona Dark</span>
+              </div>
             </div>
             <div class="featured-body">
               <div class="featured-title-wrap">
                 <h3 class="featured-item-title">Mocha Gold Leaf Tart</h3>
                 <span class="featured-item-price">₹550</span>
               </div>
-              <p class="featured-item-desc">Rich 70% dark chocolate espresso ganache crust finished with Maldon salt flakes and 24k gold leaf.</p>
+              <p class="featured-item-desc">Rich 70% dark chocolate espresso ganache crust finished with Maldon salt flakes and 24k edible gold leaf.</p>
+              
+              <div class="craft-spec-list">
+                <div class="spec-chip">Cocoa: Valrhona 70%</div>
+                <div class="spec-chip">Coffee: Ristretto</div>
+                <div class="spec-chip">Gold: 24K Edible Leaf</div>
+              </div>
+
               <div class="featured-footer">
                 <div class="featured-rating">
                   <span class="star-icon">★</span>
                   <span>4.9 (185+ reviews)</span>
                 </div>
+                <button class="btn-craft-details" data-title="Mocha Gold Leaf Tart" data-desc="Crafted with French Valrhona Guanaja 70% dark chocolate infused with double ristretto espresso, set inside a gluten-free almond crust and topped with genuine 24K gold." data-img="assets/images/dish_dessert.jpg">
+                  <span>Craft Story</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
               </div>
             </div>
           </div>
@@ -877,6 +948,26 @@
       <img id="lightboxImg" src="" alt="Expanded View" style="width: 100%; border-radius: var(--radius-md); max-height: 70vh; object-fit: contain; margin-bottom: 1rem;">
       <h4 id="lightboxCaption" style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-warm-white); margin-bottom: 1rem;"></h4>
       <button class="btn btn-outline-light btn-sm" id="closeGalleryBtn">Close Preview</button>
+    </div>
+  </div>
+
+  <!-- Craft Story Detail Modal -->
+  <div class="modal" id="craftModal">
+    <div class="modal-backdrop" id="craftModalBackdrop"></div>
+    <div class="modal-card craft-modal-card">
+      <div class="craft-modal-img-wrap">
+        <img id="craftModalImg" src="" alt="Craft Detail">
+        <span class="badge badge-gold craft-modal-badge">Atelier Specialty</span>
+      </div>
+      <div class="craft-modal-content">
+        <span class="sub-tag no-dash">Artisanal Story</span>
+        <h3 id="craftModalTitle" class="craft-modal-title"></h3>
+        <p id="craftModalDesc" class="craft-modal-desc"></p>
+        <div class="craft-modal-actions">
+          <a href="#reservation" class="btn btn-primary btn-sm" id="craftReserveBtn">Reserve Tasting Experience</a>
+          <button class="btn btn-outline btn-sm" id="closeCraftBtn">Close</button>
+        </div>
+      </div>
     </div>
   </div>
 
